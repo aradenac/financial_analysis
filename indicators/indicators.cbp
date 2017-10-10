@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="indicators" />
+		<Option makefile_is_custom="1" />
+		<Option compiler="gcc" />
+		<Option virtualFolders="CMake Files/;" />
+		<Build>
+			<Target title="all">
+				<Option type="4" />
+				<Option compiler="gcc" />
+				<MakeCommands>
+					<Build command='/usr/bin/make -f &quot;/home/osboxes/financial_analysis/indicators/Makefile&quot;  VERBOSE=1 all' />
+					<CompileFile command='/usr/bin/make -f &quot;/home/osboxes/financial_analysis/indicators/Makefile&quot;  VERBOSE=1 &quot;$file&quot;' />
+					<Clean command='/usr/bin/make -f &quot;/home/osboxes/financial_analysis/indicators/Makefile&quot;  VERBOSE=1 clean' />
+					<DistClean command='/usr/bin/make -f &quot;/home/osboxes/financial_analysis/indicators/Makefile&quot;  VERBOSE=1 clean' />
+					<AskRebuildNeeded command="$make -q -f $makefile $target" />
+					<SilentBuild command="$make -f $makefile $target &gt; $(CMD_NULL)" />
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option type="4" />
+				<Option compiler="gcc" />
+				<MakeCommands>
+					<Build command='/usr/bin/make -f &quot;/home/osboxes/financial_analysis/indicators/Makefile&quot;  VERBOSE=1 rebuild_cache' />
+					<CompileFile command='/usr/bin/make -f &quot;/home/osboxes/financial_analysis/indicators/Makefile&quot;  VERBOSE=1 &quot;$file&quot;' />
+					<Clean command='/usr/bin/make -f &quot;/home/osboxes/financial_analysis/indicators/Makefile&quot;  VERBOSE=1 clean' />
+					<DistClean command='/usr/bin/make -f &quot;/home/osboxes/financial_analysis/indicators/Makefile&quot;  VERBOSE=1 clean' />
+					<AskRebuildNeeded command="$make -q -f $makefile $target" />
+					<SilentBuild command="$make -f $makefile $target &gt; $(CMD_NULL)" />
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option type="4" />
+				<Option compiler="gcc" />
+				<MakeCommands>
+					<Build command='/usr/bin/make -f &quot;/home/osboxes/financial_analysis/indicators/Makefile&quot;  VERBOSE=1 edit_cache' />
+					<CompileFile command='/usr/bin/make -f &quot;/home/osboxes/financial_analysis/indicators/Makefile&quot;  VERBOSE=1 &quot;$file&quot;' />
+					<Clean command='/usr/bin/make -f &quot;/home/osboxes/financial_analysis/indicators/Makefile&quot;  VERBOSE=1 clean' />
+					<DistClean command='/usr/bin/make -f &quot;/home/osboxes/financial_analysis/indicators/Makefile&quot;  VERBOSE=1 clean' />
+					<AskRebuildNeeded command="$make -q -f $makefile $target" />
+					<SilentBuild command="$make -f $makefile $target &gt; $(CMD_NULL)" />
+				</MakeCommands>
+			</Target>
+			<Target title="indicators">
+				<Option output="/home/osboxes/financial_analysis/indicators/indicators" prefix_auto="0" extension_auto="0" />
+				<Option working_dir="/home/osboxes/financial_analysis/indicators" />
+				<Option object_output="./" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add directory="/usr/include/c++/6" />
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6" />
+					<Add directory="/usr/include/c++/6/backward" />
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include" />
+					<Add directory="/usr/local/include" />
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed" />
+					<Add directory="/usr/include/x86_64-linux-gnu" />
+					<Add directory="/usr/include" />
+				</Compiler>
+				<MakeCommands>
+					<Build command='/usr/bin/make -f &quot;/home/osboxes/financial_analysis/indicators/Makefile&quot;  VERBOSE=1 indicators' />
+					<CompileFile command='/usr/bin/make -f &quot;/home/osboxes/financial_analysis/indicators/Makefile&quot;  VERBOSE=1 &quot;$file&quot;' />
+					<Clean command='/usr/bin/make -f &quot;/home/osboxes/financial_analysis/indicators/Makefile&quot;  VERBOSE=1 clean' />
+					<DistClean command='/usr/bin/make -f &quot;/home/osboxes/financial_analysis/indicators/Makefile&quot;  VERBOSE=1 clean' />
+					<AskRebuildNeeded command="$make -q -f $makefile $target" />
+					<SilentBuild command="$make -f $makefile $target &gt; $(CMD_NULL)" />
+				</MakeCommands>
+			</Target>
+			<Target title="indicators/fast">
+				<Option output="/home/osboxes/financial_analysis/indicators/indicators" prefix_auto="0" extension_auto="0" />
+				<Option working_dir="/home/osboxes/financial_analysis/indicators" />
+				<Option object_output="./" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add directory="/usr/include/c++/6" />
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6" />
+					<Add directory="/usr/include/c++/6/backward" />
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include" />
+					<Add directory="/usr/local/include" />
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed" />
+					<Add directory="/usr/include/x86_64-linux-gnu" />
+					<Add directory="/usr/include" />
+				</Compiler>
+				<MakeCommands>
+					<Build command='/usr/bin/make -f &quot;/home/osboxes/financial_analysis/indicators/Makefile&quot;  VERBOSE=1 indicators/fast' />
+					<CompileFile command='/usr/bin/make -f &quot;/home/osboxes/financial_analysis/indicators/Makefile&quot;  VERBOSE=1 &quot;$file&quot;' />
+					<Clean command='/usr/bin/make -f &quot;/home/osboxes/financial_analysis/indicators/Makefile&quot;  VERBOSE=1 clean' />
+					<DistClean command='/usr/bin/make -f &quot;/home/osboxes/financial_analysis/indicators/Makefile&quot;  VERBOSE=1 clean' />
+					<AskRebuildNeeded command="$make -q -f $makefile $target" />
+					<SilentBuild command="$make -f $makefile $target &gt; $(CMD_NULL)" />
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="CMakeLists.txt">
+			<Option virtualFolder="CMake Files/" />
+		</Unit>
+		<Unit filename="main.cpp">
+			<Option target="indicators" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
