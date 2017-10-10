@@ -1,45 +1,119 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_project_file>
-	<FileVersion major="1" minor="6"/>
+	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="Project"/>
-		<Option makefile_is_custom="1"/>
-		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;"/>
+		<Option title="Project" />
+		<Option makefile_is_custom="1" />
+		<Option compiler="gcc" />
+		<Option virtualFolders="CMake Files/;" />
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/osboxes/Documents/financial_analysis"/>
-				<Option type="4"/>
+				<Option type="4" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add directory="include" />
+				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/osboxes/Documents/financial_analysis/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/osboxes/Documents/financial_analysis/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/osboxes/Documents/financial_analysis/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/osboxes/Documents/financial_analysis/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command='/usr/bin/make -f &quot;/home/osboxes/Documents/financial_analysis/Makefile&quot;  VERBOSE=1 all' />
+					<CompileFile command='/usr/bin/make -f &quot;/home/osboxes/Documents/financial_analysis/Makefile&quot;  VERBOSE=1 &quot;$file&quot;' />
+					<Clean command='/usr/bin/make -f &quot;/home/osboxes/Documents/financial_analysis/Makefile&quot;  VERBOSE=1 clean' />
+					<DistClean command='/usr/bin/make -f &quot;/home/osboxes/Documents/financial_analysis/Makefile&quot;  VERBOSE=1 clean' />
+					<AskRebuildNeeded command="$make -q -f $makefile $target" />
+					<SilentBuild command="$make -f $makefile $target &gt; $(CMD_NULL)" />
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/osboxes/Documents/financial_analysis"/>
-				<Option type="4"/>
+				<Option type="4" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add directory="include" />
+				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/osboxes/Documents/financial_analysis/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/osboxes/Documents/financial_analysis/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/osboxes/Documents/financial_analysis/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/osboxes/Documents/financial_analysis/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command='/usr/bin/make -f &quot;/home/osboxes/Documents/financial_analysis/Makefile&quot;  VERBOSE=1 rebuild_cache' />
+					<CompileFile command='/usr/bin/make -f &quot;/home/osboxes/Documents/financial_analysis/Makefile&quot;  VERBOSE=1 &quot;$file&quot;' />
+					<Clean command='/usr/bin/make -f &quot;/home/osboxes/Documents/financial_analysis/Makefile&quot;  VERBOSE=1 clean' />
+					<DistClean command='/usr/bin/make -f &quot;/home/osboxes/Documents/financial_analysis/Makefile&quot;  VERBOSE=1 clean' />
+					<AskRebuildNeeded command="$make -q -f $makefile $target" />
+					<SilentBuild command="$make -f $makefile $target &gt; $(CMD_NULL)" />
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/osboxes/Documents/financial_analysis"/>
-				<Option type="4"/>
+				<Option type="4" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add directory="include" />
+				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/osboxes/Documents/financial_analysis/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/osboxes/Documents/financial_analysis/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/osboxes/Documents/financial_analysis/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/osboxes/Documents/financial_analysis/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command='/usr/bin/make -f &quot;/home/osboxes/Documents/financial_analysis/Makefile&quot;  VERBOSE=1 edit_cache' />
+					<CompileFile command='/usr/bin/make -f &quot;/home/osboxes/Documents/financial_analysis/Makefile&quot;  VERBOSE=1 &quot;$file&quot;' />
+					<Clean command='/usr/bin/make -f &quot;/home/osboxes/Documents/financial_analysis/Makefile&quot;  VERBOSE=1 clean' />
+					<DistClean command='/usr/bin/make -f &quot;/home/osboxes/Documents/financial_analysis/Makefile&quot;  VERBOSE=1 clean' />
+					<AskRebuildNeeded command="$make -q -f $makefile $target" />
+					<SilentBuild command="$make -f $makefile $target &gt; $(CMD_NULL)" />
+				</MakeCommands>
+			</Target>
+			<Target title="faf">
+				<Option output="/home/osboxes/Documents/financial_analysis/faf" prefix_auto="0" extension_auto="0" />
+				<Option object_output="./" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add directory="/usr/include/c++/6" />
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6" />
+					<Add directory="/usr/include/c++/6/backward" />
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include" />
+					<Add directory="/usr/local/include" />
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed" />
+					<Add directory="/usr/include/x86_64-linux-gnu" />
+					<Add directory="/usr/include" />
+					<Add directory="include" />
+				</Compiler>
+				<MakeCommands>
+					<Build command='/usr/bin/make -f &quot;/home/osboxes/Documents/financial_analysis/Makefile&quot;  VERBOSE=1 faf' />
+					<CompileFile command='/usr/bin/make -f &quot;/home/osboxes/Documents/financial_analysis/Makefile&quot;  VERBOSE=1 &quot;$file&quot;' />
+					<Clean command='/usr/bin/make -f &quot;/home/osboxes/Documents/financial_analysis/Makefile&quot;  VERBOSE=1 clean' />
+					<DistClean command='/usr/bin/make -f &quot;/home/osboxes/Documents/financial_analysis/Makefile&quot;  VERBOSE=1 clean' />
+					<AskRebuildNeeded command="$make -q -f $makefile $target" />
+					<SilentBuild command="$make -f $makefile $target &gt; $(CMD_NULL)" />
+				</MakeCommands>
+			</Target>
+			<Target title="faf/fast">
+				<Option output="/home/osboxes/Documents/financial_analysis/faf" prefix_auto="0" extension_auto="0" />
+				<Option object_output="./" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add directory="/usr/include/c++/6" />
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6" />
+					<Add directory="/usr/include/c++/6/backward" />
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include" />
+					<Add directory="/usr/local/include" />
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed" />
+					<Add directory="/usr/include/x86_64-linux-gnu" />
+					<Add directory="/usr/include" />
+					<Add directory="include" />
+				</Compiler>
+				<MakeCommands>
+					<Build command='/usr/bin/make -f &quot;/home/osboxes/Documents/financial_analysis/Makefile&quot;  VERBOSE=1 faf/fast' />
+					<CompileFile command='/usr/bin/make -f &quot;/home/osboxes/Documents/financial_analysis/Makefile&quot;  VERBOSE=1 &quot;$file&quot;' />
+					<Clean command='/usr/bin/make -f &quot;/home/osboxes/Documents/financial_analysis/Makefile&quot;  VERBOSE=1 clean' />
+					<DistClean command='/usr/bin/make -f &quot;/home/osboxes/Documents/financial_analysis/Makefile&quot;  VERBOSE=1 clean' />
+					<AskRebuildNeeded command="$make -q -f $makefile $target" />
+					<SilentBuild command="$make -f $makefile $target &gt; $(CMD_NULL)" />
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/osboxes/Documents/financial_analysis/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\"/>
+		<Unit filename="CMakeLists.txt">
+			<Option virtualFolder="CMake Files/" />
 		</Unit>
+		<Unit filename="include/alert.h" />
+		<Unit filename="include/framework.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="src/alert.cpp" />
+		<Unit filename="src/framework.cpp" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
 	</Project>
 </CodeBlocks_project_file>

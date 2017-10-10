@@ -1,0 +1,5 @@
+set(PROJECT "faf")
+include_directories("include")
+file(GLOB sources *.cpp src/*.cpp)
+add_executable(${PROJECT} ${sources})
+target_link_libraries(${PROJECT} pthread)
