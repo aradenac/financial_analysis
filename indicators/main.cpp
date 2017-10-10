@@ -5,6 +5,8 @@
 #include <iterator>
 #include <algorithm>
 
+#include "include/signal.h"
+
 using namespace std;
 
 int main (){
@@ -17,12 +19,26 @@ int main (){
         int x = distance(signal.begin(),it);
         double y = *it;
         vec.emplace_back(x, y);
-
-        //cout << x << ' ' << y << endl;
     }
 
+    Signal input_sig(vec);
+    input_sig.name("input_sig");
 
-	// Apply the moving average
+
+	// creating moving average signal
+	Signal sma_signal;
+	input_sig.generate_sma(2, sma_signal);
+	sma_signal.name("sma_signal");
+
+	Signal sma_signal2;
+	input_sig.generate_sma(5, sma_signal);
+	sma_signal.name("sma_signal2");
+
+    sma_signal.generate_gnuplot();
+    sma_signal2.generate_gnuplot();
+    input_sig.generate_gnuplot();
+
+	/*
 	vector<pair<int, double>> sma;
     int sma_vals = 2 ;
 	for(auto it = vec.begin()+sma_vals; it != vec.end()  ; it++){
@@ -80,5 +96,5 @@ int main (){
     sma2_file << sma2_ss.str() << endl;
     sma2_file.close();
     cout << "sma2 file written successfuly" << endl;
-	return 0;
+	return 0;*/
 }
