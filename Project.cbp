@@ -107,10 +107,22 @@
 			<Option virtualFolder="CMake Files/" />
 		</Unit>
 		<Unit filename="include/alert.h" />
+		<Unit filename="include/currency.h" />
+		<Unit filename="include/data_source.h" />
+		<Unit filename="include/data_source_manager.h" />
 		<Unit filename="include/framework.h" />
+		<Unit filename="include/market.h" />
+		<Unit filename="include/market_id.h" />
+		<Unit filename="include/parser.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/alert.cpp" />
+		<Unit filename="src/currency.cpp" />
+		<Unit filename="src/data_source.cpp" />
+		<Unit filename="src/data_source_manager.cpp" />
 		<Unit filename="src/framework.cpp" />
+		<Unit filename="src/market.cpp" />
+		<Unit filename="src/market_id.cpp" />
+		<Unit filename="src/parser.cpp" />
 		<Extensions>
 			<code_completion />
 			<debugger />
