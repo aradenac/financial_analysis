@@ -13,7 +13,7 @@ add_library(${PROJECT} SHARED ${sources} ${includes})
 
 add_executable(${EXEC} ${sources})
 
-target_link_libraries(${EXEC} curl curlpp  pthread  )
+target_link_libraries(${EXEC}  pthread curlpp curl   )
 
 install (TARGETS ${PROJECT} DESTINATION bin)
 install (FILES ${includes}
