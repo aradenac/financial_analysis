@@ -9,6 +9,8 @@ set(CMAKE_BUILD_TYPE Debug)
 file(GLOB sources *.cpp src/*.cpp)
 file(GLOB includes "include/*.h")
 
+find_package(nlohmann_json)
+
 add_library(${PROJECT} SHARED ${sources} ${includes})
 
 add_executable(${EXEC} ${sources})

@@ -4,7 +4,12 @@
 #include <curlpp/Options.hpp>
 #include <stdlib.h>
 #include <string.h>
+#include <nlohmann/json.hpp>
+#include <string>
+
+
 using namespace faf;
+using namespace std;
 
 void* Realloc(void* ptr, size_t size)
 {
@@ -67,7 +72,12 @@ void market::update(){
     m_framework->m_curl_handle.perform();
 }
 void market::parse(){
+    using namespace nlohmann;
 
+    string mystring(m_pBuffer, buffer_size);
+    json j = mystring;
+
+    cout << j.size() << endl;
 }
 void market::check_alerts(){}
 void market::add_indicator(const string& name, shared_ptr<indicator> indicator){}
