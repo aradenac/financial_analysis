@@ -6,6 +6,7 @@
 #include <memory>
 #include <vector>
 #include "data_source.h"
+#include "parser.h"
 #include "market_id.h"
 #include "market.h"
 #include "data_source_manager.h"

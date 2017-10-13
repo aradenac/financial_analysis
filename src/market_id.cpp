@@ -4,3 +4,6 @@ market_id::market_id()
 {
     m_id = std::clock() ;
 }
+
+
+

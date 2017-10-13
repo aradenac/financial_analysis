@@ -1,3 +1,4 @@
+cmake_minimum_required(VERSION 3.7)
 set(PROJECT "faf")
 include_directories("include")
 set(CXX_FLAGS, "std=c++17")
