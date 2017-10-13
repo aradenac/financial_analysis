@@ -1,17 +1,22 @@
 #include "market.h"
+#include "framework.h"
+#include <curlpp/cURLpp.hpp>
+
 using namespace faf;
-market::market(const string& name)
+market::market(framework* f, const string& name)
 {
     m_name = name;
+    m_framework =f;
 }
 
 void market::do_your_job(){
+    cout << "doing job for market " <<m_name<<endl;
     update();
     parse();
     check_alerts();
 }
 void market::update(){
-    cout << "updating" << endl;
+    m_framework->m_curl_handle.perform();
 }
 void market::parse(){
 }

@@ -1,3 +1,4 @@
+
 #include "framework.h"
 #include <iostream>
 using namespace faf;
@@ -23,19 +24,30 @@ static void thread_worker(framework* f){
 
 framework::framework()
 {
-    // Create data souce manager and add it some sources
-    // note that in the futures sources could be fetched from files, ....
+    // initialise curlpp library
+    cURLpp::initialize();
+    m_curl_handle.setOpt(
+        cURLpp::Options::Url(
+        "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=MSFT&outputsize=full&apikey=demo"
+    ));
 
+    // once initialization done,
+    // allow the thread to start
     m_thread_activated = true;
-    // create eurusd source
-    /*shared_ptr<parser_avj> parser_avj;
-    shared_ptr<data_source> s (new data_source("EURUSD", static_pointer_cast<faf::parser>(parser_avj)) );*/
 
 }
 framework::~framework(){
+
+    // close curl pp
+    cURLpp::terminate();
+
     this_thread::sleep_for(1us);// letting time for the thread to start before stting false
     m_thread_activated = false;
     if(m_thread.joinable()) m_thread.join();
+
+    // destroy the market list
+    for(auto m:m_markets)
+        m.reset();
 }
 /*
 shared_ptr<data_source> framework::find_source(const string& name){
@@ -49,11 +61,9 @@ shared_ptr<parser> framework::find_parser(const string& name){
 market_id framework::create_market(const string& name){
 
     //shared_ptr<data_source> find_source(source_name);
-    shared_ptr<market> m ( new market(name) );
+    shared_ptr<market> m ( new market(this, name) );
 
     m_markets.push_back(m);
-
-    cout << "New market created with id "<<m->m_market_id<<endl;
 
     return m->m_market_id;
 }

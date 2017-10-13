@@ -1,12 +1,16 @@
 #ifndef FRAMEWORK_H
 #define FRAMEWORK_H
 
+#include <curlpp/cURLpp.hpp>
+#include <curlpp/Easy.hpp>
+#include <curlpp/Options.hpp>
 #include <iostream>
 #include <thread>
 #include <memory>
 #include <vector>
 #include "market_id.h"
 #include "market.h"
+
 
 using namespace std;
 
@@ -24,7 +28,7 @@ class framework
         bool m_thread_activated ;
         vector<shared_ptr<market>> m_markets;
 
-
+        cURLpp::Easy m_curl_handle;
 };
 }
 #endif // FRAMEWORK_H

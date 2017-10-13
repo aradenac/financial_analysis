@@ -9,11 +9,12 @@
 using namespace std;
 namespace faf{
 
+class framework;
 class indicator;
 class market
 {
     public:
-        market(const string& name);
+        market(framework *f, const string& name);
 
         void do_your_job();
 
@@ -26,6 +27,7 @@ class market
 
         market_id m_market_id;
         string m_name;
+        framework* m_framework;
 };
 }
 #endif // MARKET_H
