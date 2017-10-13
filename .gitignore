@@ -9,3 +9,11 @@ build-fafui-Desktop-Debug
 
 Project.cbp
 
+Project.cbp
+faftest
+libfaf.a
+libfaf.so
+install_manifest.txt
+
+Project.cbp
+
