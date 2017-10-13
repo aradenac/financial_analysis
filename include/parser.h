@@ -13,7 +13,7 @@ class data_source;
 class parser
 {
     public:
-        parser();
+
 
         virtual string parse(const data_source&);
 
@@ -25,6 +25,7 @@ class parser
 
 class parser_avj : public parser {
     public:
+        using parser::parser;
         string parse(const data_source& s)override{
             return "source parsed";
         }
