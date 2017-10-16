@@ -71,6 +71,8 @@ void market::update(){
     buffer_size = 0;
     m_framework->m_curl_handle.perform();
 }
+
+
 void market::parse(){
     using namespace nlohmann;
 
@@ -79,7 +81,9 @@ void market::parse(){
     string s(m_pBuffer, buffer_size);
     json j = json::parse(s) ;
 
-    cout << j.size() << endl;
+    for(auto it = j["Time Series (Daily)"].begin(); it!=j["Time Series (Daily)"].end(); it++) {
+        cout << "key : " << it.key() << " val: " <<it.value()<<endl;
+    }
 }
 void market::check_alerts(){}
 void market::add_indicator(const string& name, shared_ptr<indicator> indicator){}

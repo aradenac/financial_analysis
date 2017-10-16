@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 3.7)
 
+enable_testing()
+
 set(PROJECT "faf")
 
 set(EXEC "faftest")
@@ -20,5 +22,7 @@ target_link_libraries(${EXEC}  pthread curlpp curl   )
 install (TARGETS ${PROJECT} DESTINATION bin)
 install (FILES ${includes}
          DESTINATION include/${PROJECT})
+
+add_test(currency_point_test currency_point_test)
 
 
