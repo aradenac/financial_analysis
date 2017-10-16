@@ -1,3 +1,4 @@
+#include <sstream>
 #include "market.h"
 #include "framework.h"
 #include <curlpp/cURLpp.hpp>
@@ -25,13 +26,10 @@ size_t buffer_size = 0;
 // Callback must be declared static, otherwise it won't link...
 size_t WriteMemoryCallback(char* ptr, size_t size, size_t nmemb)
 {
-
   // Calculate the real size of the incoming buffer
   size_t realsize = size * nmemb;
 
-
-
-  size_t m_Size = 0;
+  size_t m_Size = buffer_size;
   // (Re)Allocate memory for the buffer
   m_pBuffer = (char*) Realloc(m_pBuffer, m_Size + realsize);
 
@@ -43,7 +41,7 @@ size_t WriteMemoryCallback(char* ptr, size_t size, size_t nmemb)
   memcpy(&(m_pBuffer[m_Size]), ptr, realsize);
   m_Size += realsize;
 
-    buffer_size = realsize;
+    buffer_size += realsize;
 
   // return the real size of the buffer...
   return realsize;
@@ -69,13 +67,17 @@ void market::do_your_job(){
 }
 void market::update(){
     // fills the static m_pBuffer
+    free(m_pBuffer);
+    buffer_size = 0;
     m_framework->m_curl_handle.perform();
 }
 void market::parse(){
     using namespace nlohmann;
 
-    string mystring(m_pBuffer, buffer_size);
-    json j = mystring;
+    //cout << m_pBuffer << endl;
+
+    string s(m_pBuffer, buffer_size);
+    json j = json::parse(s) ;
 
     cout << j.size() << endl;
 }

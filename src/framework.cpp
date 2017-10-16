@@ -10,7 +10,6 @@ static void thread_worker(framework* f){
     // compute the indicators
     // check alerts
 
-    cout << f->m_thread_activated << endl;
     while(f->m_thread_activated){
         for(auto market:f->m_markets){
             this_thread::sleep_for(1us);
