@@ -31,7 +31,8 @@ framework::framework()
     ));
 
     // once initialization done,
-    // allow the thread to start
+    // allow the thread to start by setting a flag.
+    // thread will be started by calling start_thread_analysis()
     m_thread_activated = true;
 
 }

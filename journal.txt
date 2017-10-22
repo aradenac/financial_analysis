@@ -1,0 +1,26 @@
+Saturday 21th of October
+
+Market updating feature. The purpose is to fetch (new) quotes data from remote servers. The data already fetched will be saved on the HDD under a compressed format that is still to determine. 
+
+PROGRAM STARTUP 
+At program startup compressed archives are processed to load into memory saved markets informations. This step will create market objects from archives found on the hard drive. Here we need in the archive the following information : market name, remote URL, (data format?), currency history.
+
+MARKET LOOP
+While runtime faf will go through the market list and process them so they can update, calculate indicators and check alerts. When new data are found for a market, they are appended to the currency history.
+	note: no need to check alerts neither to calculate indicators if not any new data arrived.
+
+PROGRAM STOP
+Markets in the list (i.e. RAM memory) are stored in a compressed format on the hard drive.
+
+How do we store market data in the hard drive ? An archive, containing an archive for each market, containing a json file with description of the market object to construct and load in RAM memory.
+
+When creating market we must check name uniqueness.
+
+zlib is a c library that could be used for file compression. It does not look like so easy to use, or at least take some time to dive in. As HDD memory usage reduction is not a priority, here we simply give a link to some libraries : https://stackoverflow.com/questions/1563700/compression-libraries-for-c. We keep an interface on the market object to implement the feature in the future.
+
+
+----------------------------------
+
+Sunday 22th of October
+
+Depending of the data source, data parsing can be very different. In the basic faf version, we can provide parsers by inheriting the market class and overloading the parse() method. But what if the user wants to use a new market ? He should be able to give a new data source to faf and then to describe how those data will be parsed. We exclude the option of letting the user writting a piece of c++ class as he would be obliged to know programming, what is not his purpose. As the user just wants to earn money quickly the software must be easy to use. To describe a new parsing method a Python script could do the job. Now let's see how a C++ program can interpret a Python script while runtime.
